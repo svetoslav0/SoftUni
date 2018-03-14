@@ -1,0 +1,14 @@
+/* Delimiter changed to ; */
+/* Connecting to 127.0.0.1 via MySQL (TCP/IP), username root, using password: No ... */
+SELECT CONNECTION_ID();
+/* Connected. Thread-ID: 2 */
+/* Characterset: utf8mb4 */
+SHOW STATUS;
+SHOW VARIABLES;
+SHOW DATABASES;
+/* Entering session "Unnamed" */
+SHOW COLLATION;
+SHOW VARIABLES LIKE 'collation_server';
+CREATE DATABASE `softuni` /*!40100 COLLATE 'latin1_swedish_ci' */;
+SHOW DATABASES;
+/* Entering session "Unnamed" */
