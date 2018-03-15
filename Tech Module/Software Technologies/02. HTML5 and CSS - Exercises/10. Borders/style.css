@@ -1,0 +1,23 @@
+p{
+    border-radius: 10px;
+    background-color: lightgray;
+    text-align: center;
+}
+.redButton{
+    border: 2px solid red;
+}
+.greenButton{
+    border: 2px solid green;
+}
+.blueButton{
+    border: 2px solid blue;
+}
+.redText{
+    color: red;
+}
+.greenText{
+    color: green;
+}
+.blueText{
+    color: blue;
+}
