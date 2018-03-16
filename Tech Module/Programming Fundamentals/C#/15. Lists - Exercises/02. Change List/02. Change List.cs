@@ -7,54 +7,48 @@ namespace _02._Change_List
     {
         static void Main(string[] args)
         {
-            string text = Console.ReadLine();
-            List<int> numbers = text.Split(' ').Select(int.Parse).ToList();
-            string command = " ";
+            List<int> numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
+            List<int> result = new List<int>();
             while (true)
             {
-                command = Console.ReadLine();
-                if (command == "Odd")
+                string[] input = Console.ReadLine().Split();
+                if (input[0] == "Odd")
                 {
-                    foreach (var item in numbers)
-                    {
-                        if (item % 2 == 1)
-                        {
-                            Console.Write(item + " ");
-                        }
-                    }
-                    break;
-                }
-                if (command == "Even")
-                {
-                    foreach (var item in numbers)
-                    {
-                        if (item % 2 == 0)
-                        {
-                            Console.Write(item + " ");
-                        }
-                    }
-                    break;
-                }
-                List<string> action = command.Split(' ').ToList();
-                if (action[0] == "Delete")
-                {
-                    int element = int.Parse(action[1]);
                     for (int i = 0; i < numbers.Count; i++)
                     {
-                        if (numbers[i] == element)
+                        if (numbers[i] % 2 == 1)
                         {
-                            numbers.Remove(element);
+                            result.Add(numbers[i]);
                         }
                     }
+                    Console.WriteLine(string.Join(" ", result));
+                    break;
                 }
-                else if (action[0] == "Insert")
+                else if (input[0] == "Even")
                 {
-                    int element = int.Parse(action[1]);
-                    int position = int.Parse(action[2]);
-                    numbers.Insert(position, element);
+                    for (int i = 0; i < numbers.Count; i++)
+                    {
+                        if (numbers[i] % 2 == 0)
+                        {
+                            result.Add(numbers[i]);
+                        }
+                    }
+                    Console.WriteLine(string.Join(" ", result));
+                    break;
+                }
+                switch (input[0])
+                {
+                    case "Delete":
+                        int element = int.Parse(input[1]);
+                        numbers.RemoveAll(x => x ==element);
+                        break;
+                    case "Insert":
+                        element = int.Parse(input[1]);
+                        int position = int.Parse(input[2]);
+                        numbers.Insert(position, element);
+                        break;
                 }
             }
-            Console.WriteLine();
         }
     }
 }
