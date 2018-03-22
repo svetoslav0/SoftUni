@@ -40,7 +40,7 @@ namespace _02._Change_List
                 {
                     case "Delete":
                         int element = int.Parse(input[1]);
-                        numbers.RemoveAll(x => x ==element);
+                        numbers.RemoveAll(x => x == element);
                         break;
                     case "Insert":
                         element = int.Parse(input[1]);
