@@ -24,7 +24,7 @@ namespace _06.Stupid_Password_Generator
                             {
                                 if (o > i && o > j)
                                 {
-                                    Console.WriteLine($"{i}{j}{k}{m}{o}");
+                                    Console.Write($"{i}{j}{k}{m}{o} ");
                                 }
                             }
                         }
