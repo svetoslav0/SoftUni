@@ -3,4 +3,5 @@ function multiply(arr) {
     console.log(num * 2);
 }
 
-multiply([2])
+multiply([3]);
+multiply([2]);
