@@ -10,6 +10,7 @@ function objects(input){
     }
 
 }
+<<<<<<< HEAD
 
 objects(['Pesho -> 13 -> 6.00', 'Ivan -> 12 -> 5.57', 'Toni -> 13 -> 4.90']);
 
@@ -23,3 +24,5 @@ objects(['Pesho -> 13 -> 6.00', 'Ivan -> 12 -> 5.57', 'Toni -> 13 -> 4.90']);
 //Name: Toni
 //Age: 13
 //Grade: 4.90
+=======
+>>>>>>> 390451ad56165fdb72811a3f2ab621ad23b78faa
