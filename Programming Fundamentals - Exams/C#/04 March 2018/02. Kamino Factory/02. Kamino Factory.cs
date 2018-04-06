@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace _02._Kamino_Factory
 {
@@ -8,10 +9,10 @@ namespace _02._Kamino_Factory
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            byte[] bestDNA = new byte[n - 1];
-            int bestIndex = 0;
-            int bestLength = 0;
-            int bestSum = 0;
+
+            int[] bestDNA = new int[n - 1];
+
+            int bestLength = 1, bestIndex = Int32.MaxValue, bestSum = 0;
             while (true)
             {
                 string input = Console.ReadLine();
@@ -19,50 +20,65 @@ namespace _02._Kamino_Factory
                 {
                     break;
                 }
-                int[] currentSequence = input.Split('!',StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-                int bestCurrentIndex = 0;
-                int bestCurrentLength = 0;
-                int bestCurrentSum = 0;
-                foreach (var item in currentSequence)
+                int bestCurrentLength = 1, currentLength = 1, bestCurrentIndex = 0, currentIndex = 0, currentSum = 0;
+                int[] currentSequence = input.Split('!', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+                for (int i = 0; i < currentSequence.Length; i++)
                 {
-                    if (item == 1)
+                    if (currentSequence[i] == 1)
                     {
-                        bestCurrentLength = 1;
+                        currentSum++;
                     }
                 }
-
                 for (int i = 0; i < currentSequence.Length - 1; i++)
                 {
-                    if (currentSequence[i] == 1 && currentSequence[i + 1] == 1)
+                    if (currentSequence[i] == 1 && currentSequence[i+1] == 1)
                     {
-                        bestCurrentIndex = i;
-                        bestCurrentLength++;
+                        currentLength++;
+                        currentIndex = i;
                     }
                     else
                     {
-                        bestCurrentLength = 1;
+                        currentLength = 1;
                     }
-                    if (currentSequence[i] == 1)
+                    
+                    if(currentLength > bestCurrentLength)
                     {
-                        bestCurrentSum++;
+                        bestCurrentLength = currentLength;
+                        bestCurrentIndex = currentIndex;
                     }
+                    
                 }
-                if (bestCurrentIndex < bestIndex)
+                bestCurrentIndex += 2 - bestCurrentLength;
+
+                if (bestSum < currentSum)
+                {
+                    bestSum = currentSum;
+                }
+                if (bestIndex > bestCurrentIndex)
                 {
                     bestIndex = bestCurrentIndex;
                 }
+
                 if (bestCurrentLength > bestLength)
                 {
                     bestLength = bestCurrentLength;
+                    bestDNA = currentSequence;
                 }
-                if (bestCurrentSum > bestSum)
+                else if(bestCurrentLength == bestLength && bestCurrentIndex < bestIndex)
                 {
-                    bestSum = bestCurrentSum;
+                    bestIndex = bestCurrentIndex;
+                    bestDNA = currentSequence;
                 }
+                else if (bestCurrentLength == bestLength && bestCurrentIndex < bestIndex && currentSum > bestSum)
+                {
+                    bestSum = currentSum;
+                    bestDNA = currentSequence;
+                }
+                
+                
             }
-            Console.WriteLine(bestIndex);
-            Console.WriteLine(bestLength);
-            Console.WriteLine(bestSum);
+            Console.WriteLine($"Best DNA sample {bestIndex} with sum: {bestSum}.");
+            Console.WriteLine(string.Join(" ",bestDNA));
 
         }
     }
