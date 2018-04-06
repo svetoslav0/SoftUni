@@ -1,3 +1,0 @@
-this is a test
-test from tortoisegit
-but that's a copy
