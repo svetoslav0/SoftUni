@@ -1,2 +1,2 @@
 # SoftUni
-Solutions for Exercises, Labs and Exams
+Solutions for Exercises, Projects, Labs and Exams
