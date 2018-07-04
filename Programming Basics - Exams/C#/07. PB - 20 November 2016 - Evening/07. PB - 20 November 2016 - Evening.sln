@@ -5,11 +5,15 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. House Price", "01. House Price\01. House Price.csproj", "{710E6B51-C503-40F4-96E9-35397F38B0A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Flower Shop", "02. Flower Shop\02. Flower Shop.csproj", "{D5DBAF9B-CFD8-424A-92FD-29A04F8EB271}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Flower Shop", "02. Flower Shop\02. Flower Shop.csproj", "{D5DBAF9B-CFD8-424A-92FD-29A04F8EB271}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Bike Race", "03. Bike Race\03. Bike Race.csproj", "{A422FF6B-5487-47E9-8ED3-BF13875347FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Bike Race", "03. Bike Race\03. Bike Race.csproj", "{A422FF6B-5487-47E9-8ED3-BF13875347FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Logistics", "04. Logistics\04. Logistics.csproj", "{68D88A9E-FD5D-469A-ADDE-958B2BC24DD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Logistics", "04. Logistics\04. Logistics.csproj", "{68D88A9E-FD5D-469A-ADDE-958B2BC24DD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Rocket", "05. Rocket\05. Rocket.csproj", "{2D08F89D-724C-4C4E-9CD5-5D86EBB4905A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Max Combination", "06. Max Combination\06. Max Combination.csproj", "{A128DE59-6F23-41D9-AE96-95A6117AF175}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{68D88A9E-FD5D-469A-ADDE-958B2BC24DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68D88A9E-FD5D-469A-ADDE-958B2BC24DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68D88A9E-FD5D-469A-ADDE-958B2BC24DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D08F89D-724C-4C4E-9CD5-5D86EBB4905A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D08F89D-724C-4C4E-9CD5-5D86EBB4905A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D08F89D-724C-4C4E-9CD5-5D86EBB4905A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D08F89D-724C-4C4E-9CD5-5D86EBB4905A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A128DE59-6F23-41D9-AE96-95A6117AF175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A128DE59-6F23-41D9-AE96-95A6117AF175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A128DE59-6F23-41D9-AE96-95A6117AF175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A128DE59-6F23-41D9-AE96-95A6117AF175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
