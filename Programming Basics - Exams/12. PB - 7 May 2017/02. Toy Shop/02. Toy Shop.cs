@@ -23,12 +23,9 @@ namespace _02._Toy_Shop
             if (totalToys >= 50)
             {
                 sum *= 0.75;
-                moneyLeft = sum * 0.9;
             }
-            else
-            {
-                moneyLeft = sum * 0.9;
-            }
+             
+            moneyLeft = sum * 0.9;
 
             // Check if the money would be enough and print the result
             if (moneyLeft >= tripPrice)
